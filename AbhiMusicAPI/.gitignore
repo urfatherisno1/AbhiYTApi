@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Cookies (never commit)
+cookies/
+cookies/*
+.env
+secrets.*

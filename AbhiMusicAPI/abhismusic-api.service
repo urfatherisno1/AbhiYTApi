@@ -1,0 +1,15 @@
+[Unit]
+Description=AbhiSMusic Flask API
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/AbhiMusicAPI
+Environment="PATH=/home/ubuntu/AbhiMusicAPI/.venv/bin"
+Environment="API_KEY=abhi_super_secret_key_change_me"
+ExecStart=/home/ubuntu/AbhiMusicAPI/.venv/bin/python3 /home/ubuntu/AbhiMusicAPI/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
